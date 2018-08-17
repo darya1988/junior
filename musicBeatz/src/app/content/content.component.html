@@ -1,0 +1,55 @@
+<div class="contain">
+  <app-networks></app-networks>
+  <div class="content">
+    <section id="bio">
+      <h2>Biography</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+        ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+        fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+        mollit anim id est laborum.</p>
+    </section>
+    <section id="music">
+      <h2>Music</h2>
+      <div class="list">
+        <div class="adding" (click)="modalView()">Add Music</div>
+        <div class="tracks">
+          <div class="audio" *ngFor="let audio of tracks">
+            <audio [src]="audio" controls></audio>
+            <button class="btn btn-danger" (click)="deleteTrack(audio)">X</button>
+          </div>
+          <br>
+        </div>
+        <!--<div>-->
+          <!--<audio src="http://localhost:4200/assets/audio/infinity.mp3" controls></audio>-->
+        <!--</div>-->
+        <!--<div>-->
+          <!--<audio src="http://localhost:4200/assets/audio/infinity.mp3" controls></audio>-->
+        <!--</div>-->
+        <!--<div>-->
+          <!--<audio src="http://localhost:4200/assets/audio/infinity.mp3" controls></audio>-->
+        <!--</div>-->
+      </div>
+      <div class="modalW" *ngIf="modalWindow">
+        <div class="close" (click)="closeWindow()">X</div>
+        <h2>Select track</h2>
+        <input type="file" accept="mp3/*" [(ngModel)]="track" name="file" id="file" class="inputfile" data-multiple-caption="" multiple #file/><br>
+        <button class="addFile" [disabled]="!track" (click)="addMusic(file)">Add File</button>
+      </div>
+    </section>
+    <section id="gallery">
+      <h2>Gallery</h2>
+      <img src="" alt="">
+      <img src="" alt="">
+      <img src="" alt="">
+    </section>
+    <section id="contact" class="text-center">
+      <h2>How to contact me</h2>
+      <form action="">
+        <input type="email" name="email" placeholder="email" class="form-control">
+        <textarea name="description" id="" cols="30" class="form-control" rows="10"></textarea>
+        <button type="submit" class="btn btn-info">Send me</button>
+      </form>
+    </section>
+  </div>
+</div>

@@ -1,0 +1,116 @@
+.contain {
+  app-networks {
+    position: fixed;
+  }
+  #bio {
+    width: 80%;
+    margin: 0 auto;
+    background: #d3d3d3;
+    padding: 20px 30px;
+    border-radius: 5px;
+    box-shadow: 0 2px 7px black inset;
+    margin-top: 80px;
+
+    h2 {
+      text-align: center;
+    }
+  }
+
+  #music {
+    width: 80%;
+    background: #d3d3d3;
+    margin: 0 auto;
+    padding: 20px 30px;
+    border-radius: 5px;
+    box-shadow: 0 2px 7px black inset;
+    margin-top: 80px;
+
+    .list {
+      .adding {
+        display: flex;
+        flex-direction: column;
+        width: 120px;
+        margin: 0 auto;
+        padding: 8px;
+        background: rgb(191,110,78); /* Old browsers */
+        background: -moz-linear-gradient(-45deg, rgba(191,110,78,1) 0%, rgba(140,51,16,1) 50%, rgba(117,34,1,1) 100%, rgba(240,183,161,1) 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(-45deg, rgba(191,110,78,1) 0%,rgba(140,51,16,1) 50%,rgba(117,34,1,1) 100%,rgba(240,183,161,1) 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(135deg, rgba(191,110,78,1) 0%,rgba(233,30,99,1) 50%,rgba(117,34,1,1) 100%,rgba(240,183,161,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bf6e4e', endColorstr='#f0b7a1',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+        text-align: center;
+        border-radius: 10px;
+        box-shadow: 0 2px 5px black;
+        cursor: pointer;
+        transition: 1s box-shadow;
+        color: #1b0640;
+      }
+
+      .adding:hover {
+        box-shadow: 0 5px 9px black;
+      }
+
+      .tracks {
+        display: flex;
+      }
+    }
+
+    .modalW {
+      position: absolute;
+      left: 33%;
+      top: 65%;
+      width: 500px;
+      background: lightgrey;
+      border-radius: 5px;
+      box-shadow: 0 5px 5px grey;
+      padding: 10px;
+      text-align: center;
+
+      .addFile {
+        margin: 10px;
+      }
+      .close {
+        float: right;
+        cursor: pointer;
+      }
+    }
+
+    h2 {
+      text-align: center;
+    }
+  }
+
+  #gallery {
+    background: #d3d3d3;
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px 30px;
+    border-radius: 5px;
+    box-shadow: 0 2px 7px black inset;
+    margin-top: 80px;
+
+    h2 {
+      text-align: center;
+    }
+  }
+
+  #contact {
+    background: #d3d3d3;
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px 30px;
+    border-radius: 5px;
+    box-shadow: 0 2px 7px black inset;
+    margin-top: 80px;
+
+
+    form {
+      width: 80%;
+      margin: 0 auto;
+
+      .form-control {
+        margin: 20px 0;
+      }
+
+    }
+  }
+}

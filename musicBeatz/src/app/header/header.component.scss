@@ -1,0 +1,126 @@
+@font-face {
+  font-family: 'Shojumaru';
+  src: url('http://localhost:4200/assets/fonts/Shojumaru-Regular.ttf')format('truetype');
+}
+
+.contain {
+  width: 100%;
+
+  .header {
+    //background-image: url('http://localhost:4200/assets/img/header.jpeg');
+    background: black;
+    background-size: cover;
+    //background-position: center;
+    padding: 20px;
+    height: 300px;
+    box-shadow: 0 0 7px 1px grey inset;
+    text-align: center;
+
+    .auth {
+      width: 200px;
+      float: right;
+      color: white;
+      font-size: 22px;
+
+      .login {
+        cursor: pointer;
+        transition: 1s all;
+      }
+
+      .login:hover {
+        color: #750b0b;
+      }
+      .registration {
+        cursor: pointer;
+        transition: 1s all;
+      }
+      .registration:hover {
+        color: #750b0b;
+      }
+    }
+
+    .logo {
+      width: 600px;
+    }
+
+    .close {
+      float: right;
+    }
+
+    //h1 {
+    //  text-align: center;
+    //  text-shadow: 5px 5px 2px #0D081A;
+    //  background: rgb(169,164,226); /* Old browsers */
+    //  background: -moz-linear-gradient(-45deg, rgba(169,164,226,1) 0%, rgba(111,36,168,1) 42%, rgba(29,38,99,1) 100%); /* FF3.6-15 */
+    //  background: -webkit-linear-gradient(-45deg, rgba(169,164,226,1) 0%,rgba(111,36,168,1) 42%,rgba(29,38,99,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    //  background: linear-gradient(135deg, rgba(169,164,226,1) 0%,rgba(111,36,168,1) 42%,rgba(29,38,99,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    //  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a9a4e2', endColorstr='#1d2663',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    //  -webkit-background-clip: text;
+    //  -webkit-text-fill-color: transparent;
+    //  margin-top: 75px;
+    //  font-family: 'Shojumaru';
+    //  font-size: 4em;
+    //}
+  }
+
+  .modalLogin {
+    text-align: center;
+    position: absolute;
+    background: white;
+    box-shadow: 0 2px 7px black;
+    border-radius: 5px;
+    padding: 10px;
+    left: 35%;
+    top: 20%;
+    width: 400px;
+
+    .form-control {
+      margin: 10px 0;
+    }
+
+    .error {
+      border: 1px solid red;
+    }
+
+    .success {
+      border: 1px solid green;
+    }
+  }
+
+  .modalRegistration {
+    text-align: center;
+    position: absolute;
+    background: white;
+    box-shadow: 0 2px 7px black;
+    border-radius: 5px;
+    padding: 10px;
+    left: 35%;
+    top: 20%;
+    width: 400px;
+
+    .form-control {
+      margin: 10px 0;
+    }
+  }
+
+  .menu {
+    display: flex;
+    justify-content: space-around;
+
+    .item {
+      background-color: lightgrey;
+      box-shadow: 0px 0px 5px black inset;
+      padding: 10px 30px;
+      font-size: 25px;
+      margin-top: -30px;
+      cursor: pointer;
+      transition: 0.5s background-color;
+    }
+
+    .item:hover {
+      background-color: #750b0b;
+      color: white;
+    }
+  }
+}
+

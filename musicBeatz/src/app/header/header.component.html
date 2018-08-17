@@ -1,0 +1,38 @@
+<div class="contain">
+  <div class="header">
+    <img src="http://localhost:4200/assets/img/logo.png" class="logo" alt="img">
+    <div class="auth">
+      <div class="login" (click)="modalLogin()">Login</div>
+      <div class="registration" (click)="modalRegistration()">Registration</div>
+    </div>
+  </div>
+  <div class="menu">
+    <div class="item">Bio</div>
+    <div class="item">Music</div>
+    <div class="item">Photos</div>
+    <div class="item">Contact</div>
+  </div>
+  <div class="modalLogin" *ngIf="mLogin">
+    <div class="close" (click)="closeLogin()">X</div>
+    <h2>Login</h2>
+    <form action="" [formGroup]="form">
+      <input type="text" class="form-control" name="login" placeholder="login" formControlName="email" [ngClass]="{'error': form.get('email').invalid && form.get('email').touched}">
+      <app-validation [control]="form.get('email')"></app-validation>
+      <input type="password" class="form-control" name="password" placeholder="password" formControlName="password" [ngClass]="{'error': form.get('password').invalid && form.get('password').touched}">
+      <app-validation [control]="form.get('password')"></app-validation>
+      <button type="submit" class="btn btn-success" [disabled]="form.invalid" (click)="login(form)">Login</button>
+    </form>
+  </div>
+  <div class="modalRegistration" *ngIf="mRegistration">
+    <div class="close" (click)="closeRegistration()">X</div>
+    <h2>Registration</h2>
+    <form action="" [formGroup]="form">
+      <input type="text" class="form-control" name="name" placeholder="Name">
+      <input type="email" class="form-control" name="email" placeholder="Email" formControlName="email" [ngClass]="{'error': form.get('email').invalid && form.get('email').touched}">
+      <input type="password" class="form-control" name="password" placeholder="Password" formControlName="password" [ngClass]="{'error': form.get('password').invalid && form.get('password').touched}">
+      <input type="password" class="form-control" name="confirm password" placeholder="Confirm password" [ngClass]="{'error': !form.get('password')}">
+      <button type="submit" class="btn btn-success">Registration</button>
+    </form>
+  </div>
+</div>
+
